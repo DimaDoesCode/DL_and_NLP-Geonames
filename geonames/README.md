@@ -43,7 +43,7 @@ File cities15000.txt
 
 ---
 
-<a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames/Geonames_LaBSE.ipynb">To view the Jupyter Notebook code of the research, click on this link.</a>
+<a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames/Geonames_LaBSE.ipynb">To view the Jupyter Notebook code of the research, click on this link.</a><br>
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames/geonames_labse.py">To view the Python Module code of the research, click on this link.</a>
 
 ## Libraries used
