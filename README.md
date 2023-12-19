@@ -11,4 +11,4 @@ The scope of the project extends to countries that are particularly popular for 
 
 | Project Name | Description | Libraries used |
 | :---------------------- | :---------------------- | :---------------------- |
-| [GeoNames](geonames) | The task of this project is to develop a solution for mapping geographical names to the standardized names from The GeoNames geographical database for internal use by the Yandex Practicum Career Center.|<i>diffusers, IPython, matplotlib, numpy, pandas, random, safetensors, sentence_transformers, sqlalchemy, warnings</i>
+| [GeoNames](geonames) | The goal of this project is to develop a solution for mapping geographical names to the standardized names from The GeoNames geographical database for internal use by the Yandex Practicum Career Center.|<i>diffusers, IPython, matplotlib, numpy, pandas, random, safetensors, sentence_transformers, sqlalchemy, warnings</i>
