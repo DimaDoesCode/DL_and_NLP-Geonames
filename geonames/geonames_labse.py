@@ -394,4 +394,4 @@ class MyGeoClass:
             if hasattr(self, 'engine') and self.engine:
                 self.engine.dispose()
         except Exception as e:
-            print(f'Error in __exit__: {e}')
+            print(f'Ошибка в __exit__: {e}')
