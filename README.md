@@ -1,7 +1,7 @@
 # DL and NLP <a id='geonames'></a>
 ## Repository of the DL and NLP projects.
 
-*Project Description*
+<i><b>Project Description</b></i>
 
 <img src="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames.png" width="200" height="200" align="left"/>
 
