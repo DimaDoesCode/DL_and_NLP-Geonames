@@ -1,81 +1,50 @@
-# Diploma Project
+# GeoNames
 
-## Project Description: Customer Churn Prediction for TeleDom Communication Operator
+<b>Customer:</b> Yandex Practicum Career Center.
 
-TeleDom, a telecommunications company, aims to combat customer churn. To achieve this, its staff will start offering promo codes and special conditions to those planning to terminate their communication services. To proactively identify such users, TeleDom needs a model that predicts whether a subscriber will terminate their contract. The operator's team has gathered personal data about some customers, along with information about their tariffs and services. Your task is to train a model on this data to predict customer churn.
+<b>Project Description:</b>
 
-**Description of Services:**
+**Goal:**
+Mapping arbitrary geographical names to standardized GeoNames for internal use by the Career Center.
 
-The operator provides two main types of services:
+**Tasks:**
+1. Develop a solution to match arbitrary names with GeoNames, e.g., Ереван -> Yerevan.
+2. Focus on popular relocation countries: Belarus, Armenia, Kazakhstan, Kyrgyzstan, Turkey, Serbia. Consider cities with a population over 15,000 (scalable on the client's server).
+3. Output fields: geonameid, name, region, country, cosine similarity.
+4. Output data format: a list of dictionaries, e.g., [{dict_1}, {dict_2}, …, {dict_n}], where each dictionary represents a record with the specified fields.
 
-1. **Landline Telephone Service:** Multiple lines can be connected simultaneously.
+**Optional Tasks:**
+- Allow configuring the number of suggested names (e.g., in method parameters).
+- Error correction for typos, e.g., Моченгорск -> Monchegorsk.
+- Store GeoNames data in PostgreSQL.
+- Store vectorized intermediate data in PostgreSQL.
+- Provide methods to configure database connection.
+- Include a method for class initialization (initial vectorization of GeoNames).
+- Provide methods to add vectors for new geographical names.
 
-2. **Internet:** Connection can be through a telephone line (DSL - Digital Subscriber Line) or fiber optic cable.
+**Technology Stack:**
+ML Libraries: SQL, Pandas, NLP, Transformers.
 
-Additional services include:
+**Results:**
+1. Notebook with the project solution (project description, research, solution methods).
+2. Python script containing a function (class) for integration into the Customer's system.
 
-- Internet Security: antivirus (DeviceProtection) and blocking of unsafe websites (OnlineSecurity).
-- Dedicated technical support line (TechSupport).
-- Cloud file storage for data backup (OnlineBackup).
-- Streaming TV (StreamingTV) and movie catalog (StreamingMovies).
+**Data Description:**
+Used GeoNames tables:
+- admin1CodesASCII
+- alternateNamesV2
+- cities15000
+- countryInfo
 
-Customers can pay for services monthly or enter into contracts for 1-2 years. Payment can be made in various ways, and electronic receipts are available.
+Additional open data if needed.
 
-## Data Description:
-
-The data consists of several files obtained from different sources:
-
-1. `contract_new.csv` — Contract information.
-2. `personal_new.csv` — Customer's personal data.
-3. `internet_new.csv` — Information about internet services.
-4. `phone_new.csv` — Information about telephone services.
-
-**contract_new.csv File:**
-
-- `customerID` — Subscriber identifier.
-- `BeginDate` — Contract start date.
-- `EndDate` — Contract end date.
-- `Type` — Payment type: annually-biannually or monthly.
-- `PaperlessBilling` — Electronic billing.
-- `PaymentMethod` — Payment method.
-- `MonthlyCharges` — Monthly expenses.
-- `TotalCharges` — Total subscriber charges.
-
-**personal_new.csv File:**
-
-- `customerID` — User identifier.
-- `gender` — Gender.
-- `SeniorCitizen` — Whether the subscriber is a senior citizen.
-- `Partner` — Whether the subscriber has a spouse.
-- `Dependents` — Whether the subscriber has dependents.
-
-**internet_new.csv File:**
-
-- `customerID` — User identifier.
-- `InternetService` — Connection type.
-- `OnlineSecurity` — Blocking of unsafe sites.
-- `OnlineBackup` — Cloud file storage for data backup.
-- `DeviceProtection` — Antivirus.
-- `TechSupport` — Dedicated technical support line.
-- `StreamingTV` — Streaming TV.
-- `StreamingMovies` — Movie catalog.
-
-**phone_new.csv File:**
-
-- `customerID` — User identifier.
-- `MultipleLines` — Connection of phone to multiple lines simultaneously.
-
-In all files, the `customerID` column contains the client code.
-
-Contract information is current as of February 1, 2020.
-
-**Quality Metrics:**
-
-The primary metric for model quality assessment is ROC_AUC. The interpretation metric is accuracy.
+**Test Dataset:**
+File cities15000.txt
 
 ---
 
-<a href="https://github.com/DimaDoesCode/Yandex_Practicum-Diploma_Project/blob/master/diploma_project/Diploma_Project_final.ipynb">To view the Jupyter Notebook code of the research, click on this link.</a>
+<a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames/Geonames_LaBSE.ipynb">To view the Jupyter Notebook code of the research, click on this link.</a>
+<a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames/geonames_labse.py">To view the Python Module code of the research, click on this link.</a>
 
 ## Libraries used
-<i>catboost, datetime, IPython.display, joblib, json, matplotlib.pyplot, np, os, pandas, phik, seaborn, shap, sklearn, warnings</i>
+<i>diffusers, IPython, matplotlib, numpy, pandas, random, safetensors, sentence_transformers, sqlalchemy, warnings</i>
