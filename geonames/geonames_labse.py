@@ -4,7 +4,10 @@
 from sqlalchemy import create_engine, inspect
 from sentence_transformers import SentenceTransformer, util
 from sqlalchemy.engine.url import URL
+
+import diffusers
 import pandas as pd
+import safetensors
 
 DATABASE = {
     'drivername': 'postgresql',
@@ -55,11 +58,11 @@ class MyGeoClass:
                     'selected_cities', 
                     engine)#, index_col='index')
             
-            # Получаем значение количества эпох из имени модели
-            epochs = model_name.split('-')[-2]
+            # Получаем короткое имя модели
+            suffix = model_name.split('/')[-1].replace('-', '_').lower()
             # Таблица которую мы хотим проверить
-            self.corpus_embeddings_name = f'corpus_embeddings_{epochs}'
-            
+            self.corpus_embeddings_name = f'ce_{suffix}'
+
             # Проверка наличия таблицы в базе данных
             inspector = inspect(self.engine)
             if self.corpus_embeddings_name not in inspector.get_table_names():
@@ -70,10 +73,16 @@ class MyGeoClass:
                     print(f"Ошибка при создании '{self.corpus_embeddings_name}': {e}")
                     raise
             else:
+                '''
                 query = f'SELECT * FROM {self.corpus_embeddings_name}'
                 self.corpus_embeddings = pd.read_sql_query(
                     query, con=self.engine
                 #).drop('index', axis=1).astype('float32').values
+                ).astype('float32').values
+                '''
+                self.corpus_embeddings = pd.read_sql(
+                    self.corpus_embeddings_name,
+                    con=self.engine
                 ).astype('float32').values
 
             self.selected_columns = [
@@ -179,8 +188,14 @@ class MyGeoClass:
                     print(f"Ошибка при создании 'countries': {e}")
                     raise
             else:
+                '''
                 query = f'SELECT * FROM countries'
                 countries = pd.read_sql_query(query, con=self.engine)
+                '''
+                countries = pd.read_sql(
+                    'countries',
+                    con=self.engine
+                )
 
             # Проверка наличия таблицы 'cities15000' в базе данных
             if 'cities15000' not in inspector.get_table_names():
@@ -191,8 +206,14 @@ class MyGeoClass:
                     print(f"Ошибка при создании 'cities15000': {e}")
                     raise
             else:
+                '''
                 query = f'SELECT * FROM cities15000'
                 cities15000 = pd.read_sql_query(query, con=self.engine)
+                '''
+                cities15000 = pd.read_sql(
+                    'cities15000',
+                    con=self.engine
+                )
 
             # Проверка наличия таблицы 'admin_codes' в базе данных
             if 'admin_codes' not in inspector.get_table_names():
@@ -203,8 +224,14 @@ class MyGeoClass:
                     print(f"Ошибка при создании 'admin_codes': {e}")
                     raise
             else:
+                '''
                 query = f'SELECT * FROM admin_codes'
                 admin_codes = pd.read_sql_query(query, con=self.engine)
+                '''
+                admin_codes = pd.read_sql(
+                    'admin_codes',
+                    con=self.engine
+                )
             
             admin_codes[
                 ['country_code', 'admin1_code']
