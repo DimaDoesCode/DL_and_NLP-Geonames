@@ -51,6 +51,19 @@ File cities15000.txt
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/Geonames_LaBSE.ipynb">To view the Jupyter Notebook code of the research, click on this link.</a><br>
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames_labse.py">To view the Python Module code of the research, click on this link.</a>
 
+<br>
+
+Example of using the geonames_labse.py module.:
+
+```python
+
+import geonames_labse
+
+with geonames_labse.MyGeoClass() as my_geo_instance:
+    result = my_geo_instance.my_get_similar('Каштана', top_k=5)
+```
+<br>
+
 | Project Name | Description | Libraries used |
 | :---------------------- | :---------------------- | :---------------------- |
 | GeoNames | The goal of this project is to develop a solution for mapping geographical names to the standardized names from The GeoNames geographical database for internal use by the Yandex Practicum Career Center.|<i>diffusers, IPython, matplotlib, numpy, pandas, random, safetensors, sentence_transformers, sqlalchemy, warnings</i>
