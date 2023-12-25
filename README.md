@@ -53,7 +53,7 @@ File cities15000.txt
 
 <br>
 
-Example of using the geonames_labse.py module.:
+Example of using the `geonames_labse.py` module:
 
 ```python
 
