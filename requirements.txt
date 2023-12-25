@@ -1,0 +1,5 @@
+diffusers==0.18.2
+pandas==2.0.3
+safetensors==0.3.2
+sentence_transformers==2.2.2
+SQLAlchemy==2.0.21
