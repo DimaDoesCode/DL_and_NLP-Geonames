@@ -49,6 +49,7 @@ File cities15000.txt
 ---
 
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/Geonames_LaBSE.ipynb">To view the Jupyter Notebook code of the research, click on this link.</a><br>
+<a href="https://huggingface.co/dima-does-code/LaBSE-geonames-15K-MBML-5e-v1">To view the Model card of the fine tuned LaBSE model used, click on this link.</a><br>
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames_labse.py">To view the Python Module code of the research, click on this link.</a>
 
 <br>
