@@ -66,4 +66,4 @@ with geonames_labse.MyGeoClass() as my_geo_instance:
 
 | Project Name | Description | Libraries used |
 | :---------------------- | :---------------------- | :---------------------- |
-| GeoNames | The goal of this project is to develop a solution for mapping geographical names to the standardized names from The GeoNames geographical database for internal use by the Yandex Practicum Career Center.|<i>diffusers, IPython, matplotlib, numpy, pandas, random, safetensors, sentence_transformers, sqlalchemy, warnings</i>
+| GeoNames | The goal of this project is to develop a solution for mapping geographical names to the standardized names from The GeoNames geographical database for internal use by the Yandex Practicum Career Center.|<i>IPython, matplotlib, numpy, pandas, random, safetensors, seaborn, sentence_transformers, sqlalchemy, warnings</i>
