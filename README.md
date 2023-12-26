@@ -54,7 +54,7 @@ File cities15000.txt
 
 <br>
 
-Example of using the `geonames_labse.py` module:
+Using the `geonames_labse.py` module:
 
 ```python
 
