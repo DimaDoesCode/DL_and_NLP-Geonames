@@ -56,7 +56,7 @@
 
 <br>
 
-Используя модуль `geonames_labse.py`:
+Пример использования модуля `geonames_labse.py`:
 
 ```python
 
