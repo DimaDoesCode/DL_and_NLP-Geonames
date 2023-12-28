@@ -1,3 +1,5 @@
+[![ru](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/README.ru.md)
+
 # DL and NLP <a id='geonames'></a>
 ## Repository of the DL and NLP projects.
 
