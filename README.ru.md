@@ -51,7 +51,7 @@
 ---
 
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/Geonames_LaBSE.ipynb">Чтобы посмотреть код Jupyter Notebook исследования, перейдите по этой ссылке.</a><br>
-<a href="https://huggingface.co/dima-does-code/LaBSE-geonames-15K-MBML-5e-v1">Чтобы посмотреть Карточку модели использованной, перейдите по этой ссылке.</a><br>
+<a href="https://huggingface.co/dima-does-code/LaBSE-geonames-15K-MBML-5e-v1">Чтобы посмотреть Карточку используемой модели, перейдите по этой ссылке.</a><br>
 <a href="https://github.com/DimaDoesCode/DL_and_NLP-Geonames/blob/master/geonames_labse.py">Чтобы посмотреть код Python-модуля исследования, перейдите по этой ссылке.</a>
 
 <br>
