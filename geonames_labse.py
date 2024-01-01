@@ -92,13 +92,6 @@ class MyGeoClass:
                     print(f"Ошибка при создании '{self.corpus_embeddings_name}': {e}")
                     raise
             else:
-                '''
-                query = f'SELECT * FROM {self.corpus_embeddings_name}'
-                self.corpus_embeddings = pd.read_sql_query(
-                    query, con=self.engine
-                #).drop('index', axis=1).astype('float32').values
-                ).astype('float32').values
-                '''
                 self.corpus_embeddings = pd.read_sql(
                     self.corpus_embeddings_name,
                     con=self.engine
@@ -207,10 +200,6 @@ class MyGeoClass:
                     print(f"Ошибка при создании 'countries': {e}")
                     raise
             else:
-                '''
-                query = f'SELECT * FROM countries'
-                countries = pd.read_sql_query(query, con=self.engine)
-                '''
                 countries = pd.read_sql(
                     'countries',
                     con=self.engine
@@ -225,10 +214,6 @@ class MyGeoClass:
                     print(f"Ошибка при создании 'cities15000': {e}")
                     raise
             else:
-                '''
-                query = f'SELECT * FROM cities15000'
-                cities15000 = pd.read_sql_query(query, con=self.engine)
-                '''
                 cities15000 = pd.read_sql(
                     'cities15000',
                     con=self.engine
@@ -243,10 +228,6 @@ class MyGeoClass:
                     print(f"Ошибка при создании 'admin_codes': {e}")
                     raise
             else:
-                '''
-                query = f'SELECT * FROM admin_codes'
-                admin_codes = pd.read_sql_query(query, con=self.engine)
-                '''
                 admin_codes = pd.read_sql(
                     'admin_codes',
                     con=self.engine
